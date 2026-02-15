@@ -12,42 +12,48 @@
       "title": "DMS Control",
       "subtitle": "Control DankMaterialShell via IPC",
       "description": "Browse and execute DMS IPC commands",
-      "mode": "view"
+      "mode": "view",
+      "icon": "Icon.List"
     },
     {
       "name": "dms-wallpaper",
       "title": "DMS Wallpaper",
       "subtitle": "Manage wallpapers",
       "description": "Quick access to wallpaper controls",
-      "mode": "view"
+      "mode": "view",
+      "icon": "Icon.Image"
     },
     {
       "name": "dms-theme",
       "title": "DMS Theme",
       "subtitle": "Toggle theme mode",
       "description": "Switch between light and dark themes",
-      "mode": "no-view"
+      "mode": "no-view",
+      "icon": "Icon.Sun"
     },
     {
       "name": "dms-lock",
       "title": "DMS Lock",
       "subtitle": "Lock screen",
-      "description": "Lock the screen immediately",
-      "mode": "no-view"
+      "description": "Lock screen immediately",
+      "mode": "no-view",
+      "icon": "Icon.Lock"
     },
     {
       "name": "dms-inhibit",
       "title": "DMS Inhibit",
       "subtitle": "Toggle idle inhibit",
       "description": "Prevent automatic sleep/lock",
-      "mode": "no-view"
+      "mode": "no-view",
+      "icon": "Icon.Moon"
     },
     {
       "name": "dms-modals",
       "title": "DMS Modals",
       "subtitle": "Open and control shell modals",
       "description": "Access launcher, settings, clipboard, notifications, and more",
-      "mode": "view"
+      "mode": "view",
+      "icon": "Icon.AppWindow"
     }
   ],
   "preferences": [
