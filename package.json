@@ -13,7 +13,7 @@
       "subtitle": "Control DankMaterialShell via IPC",
       "description": "Browse and execute DMS IPC commands",
       "mode": "view",
-      "icon": "Icon.List"
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/desktop.svg"
     },
     {
       "name": "dms-wallpaper",
@@ -21,7 +21,7 @@
       "subtitle": "Manage wallpapers",
       "description": "Quick access to wallpaper controls",
       "mode": "view",
-      "icon": "Icon.Image"
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/image.svg"
     },
     {
       "name": "dms-theme",
@@ -29,7 +29,7 @@
       "subtitle": "Toggle theme mode",
       "description": "Switch between light and dark themes",
       "mode": "no-view",
-      "icon": "Icon.Sun"
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/sun.svg"
     },
     {
       "name": "dms-lock",
@@ -37,7 +37,7 @@
       "subtitle": "Lock screen",
       "description": "Lock screen immediately",
       "mode": "no-view",
-      "icon": "Icon.Lock"
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/lock.svg"
     },
     {
       "name": "dms-inhibit",
@@ -45,7 +45,7 @@
       "subtitle": "Toggle idle inhibit",
       "description": "Prevent automatic sleep/lock",
       "mode": "no-view",
-      "icon": "Icon.Moon"
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/moon.svg"
     },
     {
       "name": "dms-modals",
@@ -53,7 +53,7 @@
       "subtitle": "Open and control shell modals",
       "description": "Access launcher, settings, clipboard, notifications, and more",
       "mode": "view",
-      "icon": "Icon.AppWindow"
+      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/app-window.svg"
     }
   ],
   "preferences": [
