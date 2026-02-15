@@ -1,0 +1,73 @@
+{
+  "name": "vicinae-dms",
+  "title": "DMS Control",
+  "description": "Control DankMaterialShell via IPC from Vicinae",
+  "categories": ["productivity", "developer-tools"],
+  "license": "MIT",
+  "author": "dehoej",
+  "icon": "extension_icon.webp",
+  "commands": [
+    {
+      "name": "dms",
+      "title": "DMS Control",
+      "subtitle": "Control DankMaterialShell via IPC",
+      "description": "Browse and execute DMS IPC commands",
+      "mode": "view"
+    },
+    {
+      "name": "dms-wallpaper",
+      "title": "DMS Wallpaper",
+      "subtitle": "Manage wallpapers",
+      "description": "Quick access to wallpaper controls",
+      "mode": "view"
+    },
+    {
+      "name": "dms-theme",
+      "title": "DMS Theme",
+      "subtitle": "Toggle theme mode",
+      "description": "Switch between light and dark themes",
+      "mode": "no-view"
+    },
+    {
+      "name": "dms-lock",
+      "title": "DMS Lock",
+      "subtitle": "Lock screen",
+      "description": "Lock the screen immediately",
+      "mode": "no-view"
+    },
+    {
+      "name": "dms-inhibit",
+      "title": "DMS Inhibit",
+      "subtitle": "Toggle idle inhibit",
+      "description": "Prevent automatic sleep/lock",
+      "mode": "no-view"
+    },
+    {
+      "name": "dms-modals",
+      "title": "DMS Modals",
+      "subtitle": "Open and control shell modals",
+      "description": "Access launcher, settings, clipboard, notifications, and more",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "dms-binary-path",
+      "title": "DMS Binary Path",
+      "description": "Path to dms command (default: dms)",
+      "required": false,
+      "type": "textfield",
+      "default": "dms"
+    }
+  ],
+  "dependencies": {
+    "@vicinae/api": "^0.8.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "vici build",
+    "dev": "vici develop"
+  }
+}
