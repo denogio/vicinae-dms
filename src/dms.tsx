@@ -2,49 +2,6 @@ import React from 'react';
 import { List, ActionPanel, Action, Icon, showToast, getPreferenceValues } from '@vicinae/api';
 import { callDmsIpc, setDmsBinaryPath } from './lib/dms-ipc';
 
-const categories = [
-  {
-    id: 'wallpaper',
-    title: 'Wallpaper',
-    subtitle: 'Manage wallpapers',
-    icon: Icon.Image,
-    command: 'dms-wallpaper',
-    description: 'Set, cycle, or clear wallpapers globally or per-monitor',
-  },
-  {
-    id: 'theme',
-    title: 'Theme',
-    subtitle: 'Switch between light and dark themes',
-    icon: Icon.Gear,
-    command: 'dms-theme',
-    description: 'Toggle theme mode or switch to specific theme',
-  },
-  {
-    id: 'modals',
-    title: 'Modals',
-    subtitle: 'Open and control shell modals',
-    icon: Icon.AppWindow,
-    command: 'dms-modals',
-    description: 'Access launcher, settings, clipboard, notifications, and more',
-  },
-  {
-    id: 'lock',
-    title: 'Lock',
-    subtitle: 'Lock screen immediately',
-    icon: Icon.Lock,
-    command: 'dms-lock',
-    description: 'Lock the screen using DMS lock functionality',
-  },
-  {
-    id: 'inhibit',
-    title: 'Inhibit',
-    subtitle: 'Toggle idle inhibit',
-    icon: Icon.Moon,
-    command: 'dms-inhibit',
-    description: 'Prevent automatic screen lock and sleep',
-  },
-] as const;
-
 export default function DmsControl() {
   const preferences = getPreferenceValues<{ 'dms-binary-path': string }>();
   
@@ -58,23 +15,76 @@ export default function DmsControl() {
       isShowingDetail
     >
       <List.Section title="DMS Control Categories">
-        {categories.map((category) => (
-          <List.Item
-            key={category.id}
-            title={category.title}
-            subtitle={category.subtitle}
-            icon={category.icon}
-            detail={<List.Item.Detail markdown={`## ${category.title}\n\n${category.description}`} />}
-            actions={
-              <ActionPanel>
-                <Action.CopyToClipboard
-                  title={`Copy ${category.title} Command`}
-                  content={`vicinae://extensions/vicinae-dms/${category.command}`}
-                />
-              </ActionPanel>
-            }
-          />
-        ))}
+        <List.Item
+          title="Wallpaper"
+          subtitle="Manage wallpapers"
+          icon={Icon.Image}
+          detail={<List.Item.Detail markdown="## Wallpaper\n\nSet, cycle, or clear wallpapers globally or per-monitor" />}
+          actions={
+            <ActionPanel>
+              <Action.CopyToClipboard
+                title="Copy Wallpaper Command"
+                content="vicinae://extensions/vicinae-dms/dms-wallpaper"
+              />
+            </ActionPanel>
+          }
+        />
+        <List.Item
+          title="Theme"
+          subtitle="Switch between light and dark themes"
+          icon={Icon.Gear}
+          detail={<List.Item.Detail markdown="## Theme\n\nToggle theme mode or switch to specific theme" />}
+          actions={
+            <ActionPanel>
+              <Action.CopyToClipboard
+                title="Copy Theme Command"
+                content="vicinae://extensions/vicinae-dms/dms-theme"
+              />
+            </ActionPanel>
+          }
+        />
+        <List.Item
+          title="Modals"
+          subtitle="Open and control shell modals"
+          icon={Icon.AppWindow}
+          detail={<List.Item.Detail markdown="## Modals\n\nAccess launcher, settings, clipboard, notifications, and more" />}
+          actions={
+            <ActionPanel>
+              <Action.CopyToClipboard
+                title="Copy Modals Command"
+                content="vicinae://extensions/vicinae-dms/dms-modals"
+              />
+            </ActionPanel>
+          }
+        />
+        <List.Item
+          title="Lock"
+          subtitle="Lock screen immediately"
+          icon={Icon.Lock}
+          detail={<List.Item.Detail markdown="## Lock\n\nLock the screen using DMS lock functionality" />}
+          actions={
+            <ActionPanel>
+              <Action.CopyToClipboard
+                title="Copy Lock Command"
+                content="vicinae://extensions/vicinae-dms/dms-lock"
+              />
+            </ActionPanel>
+          }
+        />
+        <List.Item
+          title="Inhibit"
+          subtitle="Toggle idle inhibit"
+          icon={Icon.Moon}
+          detail={<List.Item.Detail markdown="## Inhibit\n\nPrevent automatic screen lock and sleep" />}
+          actions={
+            <ActionPanel>
+              <Action.CopyToClipboard
+                title="Copy Inhibit Command"
+                content="vicinae://extensions/vicinae-dms/dms-inhibit"
+              />
+            </ActionPanel>
+          }
+        />
       </List.Section>
     </List>
   );
