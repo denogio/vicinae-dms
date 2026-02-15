@@ -2,16 +2,7 @@ import React from 'react';
 import { List, ActionPanel, Action, Icon, showToast, getPreferenceValues } from '@vicinae/api';
 import { callDmsIpc, setDmsBinaryPath } from './lib/dms-ipc';
 
-interface DmsCategory {
-  id: string;
-  title: string;
-  subtitle: string;
-  icon: Icon;
-  command: string;
-  description: string;
-}
-
-const categories: DmsCategory[] = [
+const categories = [
   {
     id: 'wallpaper',
     title: 'Wallpaper',
@@ -52,7 +43,7 @@ const categories: DmsCategory[] = [
     command: 'dms-inhibit',
     description: 'Prevent automatic screen lock and sleep',
   },
-];
+] as const;
 
 export default function DmsControl() {
   const preferences = getPreferenceValues<{ 'dms-binary-path': string }>();
