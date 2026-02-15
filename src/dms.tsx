@@ -6,7 +6,7 @@ interface DmsCategory {
   id: string;
   title: string;
   subtitle: string;
-  icon: any;
+  icon: Icon;
   command: string;
   description: string;
 }
