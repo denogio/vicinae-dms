@@ -5,7 +5,7 @@
   "categories": ["productivity", "developer-tools"],
   "license": "MIT",
   "author": "dehoej",
-  "icon": "extension_icon.webp",
+  "icon": "extension_icon.png",
   "commands": [
     {
       "name": "dms",
@@ -13,7 +13,7 @@
       "subtitle": "Control DankMaterialShell via IPC",
       "description": "Browse and execute DMS IPC commands",
       "mode": "view",
-      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/desktop.svg"
+      "icon": "icons/dms-control.png"
     },
     {
       "name": "dms-wallpaper",
@@ -21,15 +21,31 @@
       "subtitle": "Manage wallpapers",
       "description": "Quick access to wallpaper controls",
       "mode": "view",
-      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/image.svg"
+      "icon": "icons/dms-wallpaper.png"
     },
     {
       "name": "dms-theme",
       "title": "DMS Theme",
       "subtitle": "Toggle theme mode",
       "description": "Switch between light and dark themes",
+      "mode": "view",
+      "icon": "icons/dms-theme.png"
+    },
+    {
+      "name": "dms-theme-dark",
+      "title": "DMS Theme: Dark",
+      "subtitle": "Activate dark theme",
+      "description": "Switch to dark theme immediately",
       "mode": "no-view",
-      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/sun.svg"
+      "icon": "icons/dms-theme.png"
+    },
+    {
+      "name": "dms-theme-light",
+      "title": "DMS Theme: Light",
+      "subtitle": "Activate light theme",
+      "description": "Switch to light theme immediately",
+      "mode": "no-view",
+      "icon": "icons/dms-theme.png"
     },
     {
       "name": "dms-lock",
@@ -37,7 +53,7 @@
       "subtitle": "Lock screen",
       "description": "Lock screen immediately",
       "mode": "no-view",
-      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/lock.svg"
+      "icon": "icons/dms-lock.png"
     },
     {
       "name": "dms-inhibit",
@@ -45,7 +61,7 @@
       "subtitle": "Toggle idle inhibit",
       "description": "Prevent automatic sleep/lock",
       "mode": "no-view",
-      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/moon.svg"
+      "icon": "icons/dms-inhibit.png"
     },
     {
       "name": "dms-modals",
@@ -53,7 +69,7 @@
       "subtitle": "Open and control shell modals",
       "description": "Access launcher, settings, clipboard, notifications, and more",
       "mode": "view",
-      "icon": "https://cdn.jsdelivr.net/npm/lucide-static@0.372.0/icons/app-window.svg"
+      "icon": "icons/dms-modals.png"
     }
   ],
   "preferences": [
